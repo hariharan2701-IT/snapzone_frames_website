@@ -161,6 +161,30 @@ body {
     color: #695649;
 }
 
+/* Order Now Button Styles */
+.order-now-btn {
+    background-color: #32c466; /* Light green */
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: background-color 0.3s ease;
+}
+
+.order-now-btn i {
+    font-size: 1.2rem;
+}
+
+.order-now-btn:hover {
+    background-color: #28a956; /* Darker green */
+}
+
 /* Footer Styles */
 .footer {
     text-align: center;
