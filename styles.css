@@ -13,9 +13,13 @@ body {
 /* Header Styles */
 .header {
     text-align: center;
-    background-color: #695649; /* Light brown background */
+    background-color: #5e474d; /* Light brown background */
     padding: 5% 2%;
     border-bottom: 5px solid #695649; /* Dark brown border */
+}
+
+.ABC{
+    font-weight: bold;
 }
 
 .header h1 {
@@ -182,13 +186,13 @@ body {
 }
 
 .order-now-btn:hover {
-    background-color: #28a956; /* Darker green */
+    background-color: #2aee72; /* Darker green */
 }
 
 /* Footer Styles */
 .footer {
     text-align: center;
-    background-color: #695649;
+    background-color: #5e474d;
     padding: 10px;
     color: #ffffff;
     margin-top: 20px;
