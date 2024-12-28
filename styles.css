@@ -1,31 +1,24 @@
 /* Global Styles */
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #f9f7f3; /* Soft cream background */
-    color: #4f4a4a; /* Dark gray text for better contrast */
+    background-color: #f9f7f3;
+    color: #4f4a4a;
     margin: 0;
     padding: 0;
 }
 
-/* Import Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&family=Dancing+Script&display=swap');
-
 /* Header Styles */
 .header {
     text-align: center;
-    background-color: #5e474d; /* Light brown background */
+    background-color: #5e474d;
     padding: 5% 2%;
-    border-bottom: 5px solid #695649; /* Dark brown border */
-}
-
-.ABC{
-    font-weight:bold;
+    border-bottom: 5px solid #695649;
 }
 
 .header h1 {
     font-family: 'Playfair Display', serif;
     font-size: 3rem;
-    color: #ffffff; /* White text for contrast */
+    color: #ffffff;
     margin: 0;
     letter-spacing: 2px;
 }
@@ -33,7 +26,7 @@ body {
 .header p {
     font-family: 'Dancing Script', cursive;
     font-size: 1.5rem;
-    color: #fff5f0; /* Light ivory */
+    color: #fff5f0;
     margin-top: 10px;
     letter-spacing: 1px;
 }
@@ -70,51 +63,6 @@ body {
     }
 }
 
-/* Responsive adjustments */
-@media (max-width: 768px) {
-    .sale-text {
-        font-size: 28px;
-    }
-
-    .header h1 {
-        font-size: 2rem;
-    }
-
-    .header p {
-        font-size: 1rem;
-    }
-
-    .frame-section h2 {
-        font-size: 1.8rem;
-    }
-
-    .frame {
-        padding: 15px;
-    }
-}
-
-@media (max-width: 480px) {
-    .sale-text {
-        font-size: 22px;
-    }
-
-    .header h1 {
-        font-size: 1.8rem;
-    }
-
-    .header p {
-        font-size: 1rem;
-    }
-
-    .frame-section h2 {
-        font-size: 1.5rem;
-    }
-
-    .frame {
-        padding: 10px;
-    }
-}
-
 /* Frame Section Styles */
 .frame-section {
     padding: 4% 2%;
@@ -128,7 +76,6 @@ body {
     font-family: 'Brush Script MT', cursive;
 }
 
-/* Grid Layout for Frames */
 .frames {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -142,6 +89,13 @@ body {
     border-radius: 10px;
     padding: 20px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+}
+
+.frame img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
 }
 
 .frame:hover {
@@ -149,25 +103,8 @@ body {
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
-.frame h3 {
-    font-weight: bold;
-    color: #4f4a4a;
-    font-family: 'Brush Script MT', cursive;
-}
-
-.frame p {
-    font-size: 1rem;
-    margin: 5px 0;
-}
-
-.offer {
-    font-weight: bold;
-    color: #695649;
-}
-
-/* Order Now Button Styles */
 .order-now-btn {
-    background-color: #32c466; /* Light green */
+    background-color: #32c466;
     color: white;
     border: none;
     padding: 10px 15px;
@@ -178,22 +115,84 @@ body {
     display: inline-flex;
     align-items: center;
     gap: 8px;
-    transition: background-color 0.3s ease;
-}
-
-.order-now-btn i {
-    font-size: 1.2rem;
 }
 
 .order-now-btn:hover {
-    background-color: #2aee72; /* Darker green */
+    background-color: #2aee72;
+}
+
+/* Cart Modal Styles */
+.cart-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.cart-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 80%;
+    max-width: 500px;
+}
+
+#cart-items {
+    max-height: 300px;
+    overflow-y: auto;
+    margin-bottom: 20px;
+}
+
+.cart-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #32c466;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 50px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.cart-button:hover {
+    background-color: #2aee72;
+}
+
+#cart-count {
+    font-weight: bold;
+    margin-left: 8px;
 }
 
 /* Footer Styles */
 .footer {
     text-align: center;
     background-color: #5e474d;
-    padding: 10px;
-    color: #ffffff;
-    margin-top: 20px;
+    color: white;
+    padding: 20px 0;
+}
+
+.footer p {
+    margin: 0;
+}
+
+.footer a {
+    color: white;
+    margin-left: 10px;
+}
+
+.footer i {
+    font-size: 1.5rem;
 }

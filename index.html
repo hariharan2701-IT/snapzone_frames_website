@@ -3,195 +3,65 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Our Frame Store</title>
+  <title>Snapzone Frames Webstore</title>
   <link rel="stylesheet" href="styles.css">
-  <!-- Add Bootstrap Icons -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
 </head>
 <body>
   <header class="header">
-    <h1>snapzone_frames webstore</h1>
-    <p>FRAME IT ! REMEMBER IT !</p>
-
-    
+    <h1>Snapzone Frames Webstore</h1>
+    <p>FRAME IT! REMEMBER IT!</p>
   </header>
 
   <div class="sale-container">
-    <div class="sale-text">DECEMBER SALE OFFER PRICE</div>
+    <div class="sale-text">THANKS FOR CHOOSING SNAPZONE FRAMES! ❤️</div>
   </div>
+
   <main>
-  <!-- Small Frame Sizes -->
-  <section class="frame-section">
-    <h2>Small Frame Sizes</h2>
-    <div class="frames">
-      <div class="frame">
-        <div class="ABC">
-          <p>DECEMBER SALE OFFER NOT VALID FOR THIS FRAME</p>
-        </div>
-        <h3>4 × 4 Inches</h3>
-        <p>Colors: Sleek Black 🖤 | Classic White 🤍</p>
+    <section class="frame-section">
+      <h2>Small Frame Sizes</h2>
+      <div id="small-frames" class="frames"></div>
+    </section>
 
-        <p>Normal Price: ₹199</p>
-        <p class="offer">Special Offer: ₹199 🎁</p>
-        <button class="order-now-btn" onclick="orderNow('4x4')">
-          <i class="bi bi-whatsapp"></i> Order Now
-        </button>
-      </div>
-      <div class="frame">
-        <h3>4 × 6 Inches</h3>
-        <p>Colors: Sleek Black 🖤 | Classic White 🤍</p>
-        <p>Normal Price: ₹279</p>
-        <p class="offer">Special Offer: ₹229 🎁</p>
-        <button class="order-now-btn" onclick="orderNow('4x6')">
-          <i class="bi bi-whatsapp"></i> Order Now
-        </button>
-      </div>
-      <div class="frame">
-        <h3>5 × 7 Inches</h3>
-        <p>Colors: Sleek Black 🖤 | Classic White 🤍</p>
-        <p>Normal Price: ₹299</p>
-        <p class="offer">Special Offer: ₹259 🎁</p>
-        <button class="order-now-btn" onclick="orderNow('5x7')">
-          <i class="bi bi-whatsapp"></i> Order Now
-        </button>
-      </div>
-      <div class="frame">
-        <h3>6 × 8 Inches</h3>
-        <p>Colors: Sleek Black 🖤 | Classic White 🤍</p>
-        <p>Normal Price: ₹349</p>
-        <p class="offer">Special Offer: ₹299 🎁</p>
-        <button class="order-now-btn" onclick="orderNow('6x8')">
-          <i class="bi bi-whatsapp"></i> Order Now
-        </button>
+    <section class="frame-section">
+      <h2>Medium Frame Sizes</h2>
+      <div id="medium-frames" class="frames"></div>
+    </section>
+
+    <section class="frame-section">
+      <h2>Large Frame Sizes</h2>
+      <div id="large-frames" class="frames"></div>
+    </section>
+
+    <!-- Cart Modal -->
+    <div id="cart-modal" class="cart-modal">
+      <div class="cart-content">
+        <h2>Your Cart</h2>
+        <div id="cart-items"></div>
+        <p id="total-price">Total: ₹0</p>
+        <button class="order-now-btn" onclick="clearCart()">Clear Cart</button>
+        <button class="order-now-btn" onclick="closeCart()">Close</button>
+        <button class="order-now-btn" onclick="sendToWhatsapp()">Order via WhatsApp <i class="bi bi-whatsapp"></i></button>
       </div>
     </div>
-  </section>
+  </main>
 
-  <!-- Medium Frame Sizes -->
-  <section class="frame-section">
-    <h2>Medium Frame Sizes</h2>
-    <div class="frames">
-      <div class="frame">
-        <div class="ABC">
-          <p>DECEMBER SALE OFFER NOT VALID FOR THIS FRAME</p>
-        </div>
-        <h3>8 × 8 Inches</h3>
-        <p>Colors: Sleek Black 🖤 | Classic White 🤍</p>
-        <p>Normal Price: ₹349</p>
-        <p class="offer">Special Offer: ₹349 🎁</p>
-        <button class="order-now-btn" onclick="orderNow('8x8')">
-          <i class="bi bi-whatsapp"></i> Order Now
-        </button>
-      </div>
-      <div class="frame">
-        <div class="ABC">
-          <p>DECEMBER SALE OFFER NOT VALID FOR THIS FRAME</p>
-        </div>
-        <h3>8 × 10 Inches</h3>
-        <p>Colors: Sleek Black 🖤 | Classic White 🤍</p>
-        <p>Normal Price: ₹399</p>
-        <p class="offer">Special Offer: ₹399 🎁</p>
-        <button class="order-now-btn" onclick="orderNow('8x10')">
-          <i class="bi bi-whatsapp"></i> Order Now
-        </button>
-      </div>
-      <div class="frame">
-        <h3>10 × 12 Inches</h3>
-        <p>Colors: Elegant Black 🖤 | Timeless White 🤍</p>
-        <p>Normal Price: ₹599</p>
-        <p class="offer">Special Offer: ₹499 🎁</p>
-        <button class="order-now-btn" onclick="orderNow('10x12')">
-          <i class="bi bi-whatsapp"></i> Order Now
-        </button>
-      </div>
-      <div class="frame">
-        <h3>12 × 15 Inches</h3>
-        <p>Colors: Sleek Black 🖤 | Classic White 🤍</p>
-        <p>Normal Price: ₹699</p>
-        <p class="offer">Special Offer: ₹649 🎁</p>
-        <button class="order-now-btn" onclick="orderNow('12x15')">
-          <i class="bi bi-whatsapp"></i> Order Now
-        </button>
-      </div>
-    </div>
-  </section>
+  <!-- Floating Cart Button -->
+  <button id="cart-button" class="cart-button" onclick="openCart()">
+    <i class="bi bi-cart"></i> <span id="cart-count">0</span>
+  </button>
 
-  <!-- Large Frame Sizes -->
-  <section class="frame-section">
-    <h2>Large Frame Sizes</h2>
-    <div class="frames">
-      <div class="frame">
-        <h3>16 × 20 Inches</h3>
-        <p>Colors: Sleek Black 🖤 | Classic White 🤍</p>
-        <p>Normal Price: ₹999</p>
-        <p class="offer">Special Offer: ₹899 🎁</p>
-        <button class="order-now-btn" onclick="orderNow('16x20')">
-          <i class="bi bi-whatsapp"></i> Order Now
-        </button>
-      </div>
-      <div class="frame">
-        <h3>18 × 24 Inches</h3>
-        <p>Colors: Sleek Black 🖤 | Classic White 🤍</p>
-        <p>Normal Price: ₹1299</p>
-        <p class="offer">Special Offer: ₹1099 🎁</p>
-        <button class="order-now-btn" onclick="orderNow('18x24')">
-          <i class="bi bi-whatsapp"></i> Order Now
-        </button>
-      </div>
-      <div class="frame">
-        <h3>20 × 24 Inches</h3>
-        <p>Colors: Sleek Black 🖤 | Classic White 🤍</p>
-        <p>Normal Price: ₹1399</p>
-        <p class="offer">Special Offer: ₹1299 🎁</p>
-        <button class="order-now-btn" onclick="orderNow('20x24')">
-          <i class="bi bi-whatsapp"></i> Order Now
-        </button>
-        </div>
-        <div class="frame">
-          <h3>20 × 30 Inches</h3>
-          <p>Colors: Sleek Black 🖤 | Classic White 🤍</p>
-          <p>Normal Price: ₹2799</p>
-          <p class="offer">Special Offer: ₹2499 🎁</p>
-          <button class="order-now-btn" onclick="orderNow('20x30')">
-            <i class="bi bi-whatsapp"></i> Order Now
-          </button>
-        </div>
-        <div class="frame">
-          <div class="ABC">
-            <p> HORIZONTAL FRAME</p>
-          </div>
-          <h3>18 × 12 Inches</h3>
-          <p>Colors: Sleek Black 🖤 | Classic White 🤍</p>
-          <p>Normal Price: ₹1899</p>
-          <p class="offer">Special Offer: ₹1699 🎁</p>
-          <button class="order-now-btn" onclick="orderNow('18x12')">
-            <i class="bi bi-whatsapp"></i> Order Now
-          </button>
-        </div>
-    </div>
-  </section>
-</main>
- 
   <footer class="footer">
-    <p>© snapzone frames , All Rights Reserved.</p>
-    
+    <p>© Snapzone Frames, All Rights Reserved.</p>
+    <div>
       <a href="https://wa.me/7708554879" target="_blank">
-        <i class="bi bi-whatsapp"> </i>
+        <i class="bi bi-whatsapp"></i>
       </a>
-      (Call / WhatsApp Contact Us +91 7708554879 ,+91 9843692989)
+      (Call / WhatsApp Contact Us: +91 7708554879, +91 9843692989)
     </div>
   </footer>
 
-  <script>
-    function orderNow(frameSize) {
-      const message = `Hey snapzone_frames, I wish to order the ${frameSize} frame.`;
-      const encodedMessage = encodeURIComponent(message);
-      const url = `https://wa.me/7708554879?text=${encodedMessage}`;
-      window.open(url, '_blank');
-    }
-  </script>
-  
-  
-
+  <script src="frames.js"></script>
+  <script src="scripts.js"></script>
 </body>
 </html>
