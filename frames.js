@@ -8,7 +8,7 @@ const frames = {
     medium: [
         { size: "8 × 8 Inches", price: 349, colors: ["Sleek Black 🖤", "Classic White 🤍"] },
         { size: "8 × 10 Inches", price: 399, colors: ["Sleek Black 🖤", "Classic White 🤍"] },
-        { size: "10 × 12 Inches", price: 599, colors: ["Elegant Black 🖤", "Timeless White 🤍"] },
+        { size: "10 × 12 Inches", price: 599, colors: ["Elegant Black 🖤", "Timeless White 🤍 "] },
         { size: "12 × 15 Inches", price: 699, colors: ["Sleek Black 🖤", "Classic White 🤍"] },
     ],
     large: [

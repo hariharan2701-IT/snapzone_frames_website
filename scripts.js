@@ -59,3 +59,4 @@ document.addEventListener("DOMContentLoaded", () => {
         frameList.forEach((frame) => createFrameElement(frame, category));
     });
 });
+
