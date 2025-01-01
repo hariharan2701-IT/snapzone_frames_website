@@ -6,9 +6,15 @@ document.addEventListener("DOMContentLoaded", () => {
     // Display the pop-up
     popup.style.display = "flex";
 
-    // Close the pop-up
+    // Close the pop-up and close the page
     closePopupButton.addEventListener("click", () => {
         popup.style.display = "none";
+
+        // Attempt to close the window (only works if the page was opened via JavaScript)
+        window.close();
+
+        // Alternatively, redirect to a blank page if window.close() is not supported
+        // window.location.href = "about:blank"; // Uncomment this line if you want a redirect instead of closing
     });
 
     // The rest of your previous code goes here
