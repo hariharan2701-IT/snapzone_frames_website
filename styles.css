@@ -121,61 +121,6 @@ body {
     background-color: #2aee72;
 }
 
-/* Cart Modal Styles */
-.cart-modal {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.7);
-    justify-content: center;
-    align-items: center;
-    z-index: 1000;
-}
-
-.cart-content {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    text-align: center;
-    width: 80%;
-    max-width: 500px;
-}
-
-#cart-items {
-    max-height: 300px;
-    overflow-y: auto;
-    margin-bottom: 20px;
-}
-
-.cart-button {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background-color: #32c466;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 50px;
-    font-size: 1rem;
-    font-weight: bold;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-}
-
-.cart-button:hover {
-    background-color: #2aee72;
-}
-
-#cart-count {
-    font-weight: bold;
-    margin-left: 8px;
-}
-
 /* Footer Styles */
 .footer {
     text-align: center;
@@ -195,4 +140,57 @@ body {
 
 .footer i {
     font-size: 1.5rem;
+}
+
+/* Pop-up Styles */
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-content {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 600px;
+    text-align: center;
+}
+
+.popup-header {
+    background-color: #5e474d;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.popup-header h2 {
+    margin: 0;
+}
+
+.popup-body p {
+    font-size: 1.1rem;
+    margin: 10px 0;
+}
+
+.close-popup-btn {
+    background-color: #5e474d;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.close-popup-btn:hover {
+    background-color: #695649;
 }

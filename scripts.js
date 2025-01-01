@@ -1,14 +1,23 @@
 document.addEventListener("DOMContentLoaded", () => {
-    const cart = [];
-    const cartItems = document.getElementById("cart-items");
-    const totalPriceElement = document.getElementById("total-price");
+    // Show the pop-up when the page loads
+    const popup = document.getElementById("popup-message");
+    const closePopupButton = document.getElementById("close-popup");
 
+    // Display the pop-up
+    popup.style.display = "flex";
+
+    // Close the pop-up
+    closePopupButton.addEventListener("click", () => {
+        popup.style.display = "none";
+    });
+
+    // The rest of your previous code goes here
     const smallFrames = document.getElementById("small-frames");
     const mediumFrames = document.getElementById("medium-frames");
     const largeFrames = document.getElementById("large-frames");
 
     const frameImages = {
-        "4 × 4 Inches": "images/4x4.png", // Replace with actual image paths
+        "4 × 4 Inches": "images/4x4.png", 
         "4 × 6 Inches": "images/4x6.png",
         "5 × 7 Inches": "images/5x7.png",
         "6 × 8 Inches": "images/6x8.png",
@@ -30,10 +39,9 @@ document.addEventListener("DOMContentLoaded", () => {
             <img src="${frameImages[frame.size]}" alt="${frame.size} frame">
             <h3>${frame.size}</h3>
             <p>Colors: ${frame.colors.join(" | ")}</p>
-            <p>Normal Price: ₹${frame.price}</p>
-            <p class="offer">Special Offer: ₹${frame.offer}</p>
-            <button class="order-now-btn" onclick="addToCart('${frame.size}', ${frame.offer}, '${frameImages[frame.size]}')">
-                <i class="bi bi-cart"></i> Add to Cart
+            <p>Price: ₹${frame.price}</p>
+            <button class="order-now-btn">
+                <i class="bi bi-cart"></i> Order Now
             </button>
         `;
         if (category === "small") smallFrames.appendChild(frameDiv);
@@ -44,45 +52,4 @@ document.addEventListener("DOMContentLoaded", () => {
     Object.entries(frames).forEach(([category, frameList]) => {
         frameList.forEach((frame) => createFrameElement(frame, category));
     });
-
-    window.addToCart = function (size, price, image) {
-        cart.push({ size, price, image });
-        updateCartDisplay();
-        alert(`${size} frame added to cart.`);
-    };
-
-    function updateCartDisplay() {
-        cartItems.innerHTML = "";
-        let totalPrice = 0;
-        cart.forEach((item, index) => {
-            const itemDiv = document.createElement("div");
-            itemDiv.innerHTML = `
-                <img src="${item.image}" alt="${item.size}" class="cart-item-image">
-                ${item.size} - ₹${item.price}
-                <button onclick="removeFromCart(${index})">Remove</button>
-            `;
-            cartItems.appendChild(itemDiv);
-            totalPrice += item.price;
-        });
-        totalPriceElement.textContent = `Total: ₹${totalPrice}`;
-    }
-
-    window.removeFromCart = function (index) {
-        cart.splice(index, 1);
-        updateCartDisplay();
-    };
-
-    window.clearCart = function () {
-        cart.length = 0;
-        updateCartDisplay();
-        alert("Cart cleared!");
-    };
-
-    window.openCart = function () {
-        document.getElementById("cart-modal").style.display = "flex";
-    };
-
-    window.closeCart = function () {
-        document.getElementById("cart-modal").style.display = "none";
-    };
 });
